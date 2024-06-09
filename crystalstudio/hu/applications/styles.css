@@ -1,0 +1,85 @@
+/* Betűtípus betöltése */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Fredoka', sans-serif;
+    background-color: #bfeef4; /* Világoskék háttérszín */
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #1abc9c;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+@media (min-width: 900px) {
+    .content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #34495e;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, background-color 0.3s;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section:hover {
+    transform: scale(1.05);
+    background-color: #3b5998;
+}
+
+h2 {
+    margin-top: 0;
+    color: #4da6ff; /* Világosabb kék */
+}
+
+iframe {
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 640px;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+    .form-section iframe {
+        width: 640px;
+    }
+
+    .discord-section iframe {
+        width: 350px;
+        height: 500px;
+    }
+}
