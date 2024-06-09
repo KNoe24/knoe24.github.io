@@ -1,9 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Example animation on form section load
+    // Példa animáció az űrlap szekció betöltésekor
     const formSection = document.querySelector('.form-section');
-    formSection.style.opacity = 0;
+    formSection.classList.add('section-enter');
     setTimeout(() => {
-        formSection.style.transition = 'opacity 1s';
-        formSection.style.opacity = 1;
+        formSection.classList.add('section-enter-active');
     }, 500);
+
+    // Példa animáció a Discord szekció betöltésekor
+    const discordSection = document.querySelector('.discord-section');
+    discordSection.classList.add('section-enter');
+    setTimeout(() => {
+        discordSection.classList.add('section-enter-active');
+    }, 1000);
 });

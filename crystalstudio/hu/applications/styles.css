@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    position: relative; /* A position: relative azért kell, hogy a footer abszolút pozíciózás működjön */
 }
 
 header {
@@ -47,7 +48,9 @@ section {
     border-radius: 10px;
     background-color: #34495e;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s, background-color 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -83,3 +86,14 @@ iframe {
         height: 500px;
     }
 }
+
+/* Animáció a szekciók megjelenésekor */
+.section-enter {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.section-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease,
