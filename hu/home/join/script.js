@@ -1,7 +1,8 @@
 // script.js
 document.addEventListener("DOMContentLoaded", () => {
-    const background = document.querySelector('.background');
-    const diamondCount = 30; // Adjust the number of diamonds
+    const background = document.querySelector('.join-hero');
+
+    const diamondCount = 30; // Gyémántok száma (opcionális)
 
     for (let i = 0; i < diamondCount; i++) {
         const diamond = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -15,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
             M32 2 L32 62 
             M2 22 L62 22 
             M12 22 L32 62 L52 22 Z
-        `); // Diamond shape path with lines
+        `); // Gyémánt alakú útvonal
 
         diamond.appendChild(diamondShape);
         diamond.style.left = `${Math.random() * 100}vw`;

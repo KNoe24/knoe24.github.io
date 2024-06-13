@@ -23,16 +23,28 @@ h1, p {
     overflow: hidden;
 }
 
+.join-hero {
+    position: relative; /* Relatív pozíció */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
 .join-hero::after {
     content: '';
-    position: fixed; /* Fix pozíció */
+    position: absolute; /* Abszolút pozíció */
     top: 0;
     left: 0;
-    width: 100vw; /* Teljes szélességű */
-    height: 100vh; /* Teljes magasságú */
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: -1; /* Háttérzáró elem alacsonyabb z-index */
 }
+
 
 
 .join-content {
@@ -40,11 +52,6 @@ h1, p {
     z-index: 2;
 }
 
-.join-hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    animation: fadeInDown 1s ease-out;
-}
 
 .domain {
     font-size: 2rem;
