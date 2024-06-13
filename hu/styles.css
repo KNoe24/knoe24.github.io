@@ -1,125 +1,140 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    background-color: #f3f3f3;
+    font-family: 'Fredoka', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.banner {
+    background-color: #222;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.banner span {
+    font-size: 1.2em;
+}
+
+.banner-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-left: auto; /* Aligns the button to the right */
+    margin-right: 35px; /* Centers the button horizontally */
+}
+
+.banner-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.2);
+}
+
+.video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
 }
 
 .hero {
-    background: url('hero-background.jpg') no-repeat center center/cover;
+    position: relative;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    padding-top: 50px; /* To prevent overlap with banner */
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
+    max-width: 600px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .hero h1 {
-    font-size: 4rem;
-    animation: fadeInDown 1s ease-out;
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out;
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin: 20px 0;
-    animation: fadeInUp 1s ease-out;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    animation: slideIn 1.5s ease-in-out;
 }
 
-.btn {
-    background-color: #ff9800;
+.hero .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
     color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 1.2rem;
+    background-color: #3498db;
+    border: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
-    animation: fadeIn 2s ease-out;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: slideIn 2s ease-in-out;
 }
 
-.btn:hover {
-    background-color: #e68900;
+.hero .button:hover {
+    background-color: #2980b9;
+    transform: scale(1.2);
 }
 
 .features {
     padding: 50px 20px;
+    background-color: #f4f4f4;
     text-align: center;
-    background-color: #fff;
-}
-
-.features h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+    padding-top: 100px; /* To ensure space between sections */
 }
 
 .feature {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
-.join {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #ff9800;
-    color: white;
+.feature h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-.join h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+.feature p {
+    font-size: 1.2em;
+    color: #666;
 }
 
-footer {
+.footer {
     padding: 20px;
     text-align: center;
-    background-color: #333;
+    background-color: #222;
     color: white;
-}
-
-@keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
