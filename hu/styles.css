@@ -102,11 +102,33 @@ body, html {
     transform: scale(1.2);
 }
 
+
+
+.features .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: slideIn 2s ease-in-out;
+}
+
+.features .button:hover {
+	background-color: #2980b9;
+    transform: scale(1.2);
+}
+
 .features {
     padding: 50px 20px;
     background-color: #f4f4f4;
     text-align: center;
     padding-top: 100px; /* To ensure space between sections */
+	
 }
 
 .feature {
