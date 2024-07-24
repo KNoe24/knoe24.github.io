@@ -1,0 +1,50 @@
+body {
+    font-family: 'Fredoka', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #4300A0;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px; /* Adjusted max-width to allow for more width */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #FDADDE;
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    max-width: 1000px; /* Adjusted max-width for form container */
+    margin: 0 auto;
+}
+
+.form-container iframe {
+    width: 100%;
+    height: 1000px; /* Adjusted height for better visibility */
+    border: none;
+    border-radius: 15px;
+}
+
+.form-container:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .form-container iframe {
+        height: 800px; /* Adjusted height for smaller screens */
+    }
+}
