@@ -1,0 +1,140 @@
+body {
+    font-family: 'Fredoka', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.banner {
+    text-align: center;
+    padding: 50px;
+    background-color: #555;
+    color: white;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.banner button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #ff4757;
+    border: none;
+    color: white;
+    transition: transform 0.3s ease;
+    border-radius: 25px; /* Itt kerekítjük le a gombokat */
+}
+
+.banner button:hover {
+    transform: scale(1.1);
+}
+
+.banner button a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.a button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #ff4757;
+    border: none;
+    color: white;
+    transition: transform 0.3s ease;
+    border-radius: 10px; /* Itt kerekítjük le a gombokat */
+}
+
+.a button:hover {
+    transform: scale(1.1);
+}
+
+.a button {
+    color: white;
+    text-decoration: none;
+
+
+    
+}
+section {
+    margin: 50px auto;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.features .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: slideIn 2s ease-in-out;
+}
+
+.features .button:hover {
+	background-color: #2980b9;
+    transform: scale(1.2);
+}
+
+.features {
+    padding: 5px 5px;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding-top: 5px; /* To ensure space between sections */
+	
+}
+
+.features {
+    margin-bottom: 10px;
+}
+
+.features h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.features p {
+    font-size: 1.2em;
+    color: #666;
+}
